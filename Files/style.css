@@ -1,0 +1,31 @@
+﻿html {
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	background: lightgrey;
+	opacity: 0.6;
+	border-radius: 5px;
+}
+
+.resizeGrip {
+	background: lightgrey;
+	position: absolute;
+	opacity:0.5;
+}
+
+#content {
+	position: absolute;
+	top:20px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+}
+
+#resizeGripTop {
+	height: 40px;
+	top: 0;
+	left: 10px;
+	right: 10px;
+	cursor: ns-move;
+}
+/* ScrimIRC 2014 - SamEureka */

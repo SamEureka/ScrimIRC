@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+	<head> 
+		<link rel="stylesheet" href="style.css" />
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<title>ScrimIRC</title>
+		<script>
+			function dragMove(){
+				overwolf.windows.getCurrentWindow(function(result){
+					if (result.status=="success"){
+						overwolf.windows.dragMove(result.window.id);
+					}
+				});
+			};
+			
+			function closeWindow(){
+				overwolf.windows.getCurrentWindow(function(result){
+					if (result.status=="success"){
+						overwolf.windows.close(result.window.id);
+					}
+				});
+			};
+			
+						function minimizeWindow(){
+				overwolf.windows.getCurrentWindow(function(result){
+					if (result.status=="success"){
+						overwolf.windows.minimize(result.window.id);
+					}
+				});
+			};
+		</script>
+	</head>
+	<body>
+		<div class="resizeGrip" id="resizeGripTop" onmousedown="dragMove('Top');">ScrimIRC</div>
+		<div id="content">
+       	<iframe src="http://webchat.quakenet.org/?channels=hawkenscrim&uio=OT10cnVlJjExPTIwNQa5" width="647" height="300"></iframe>
+			<button id="close" onclick="closeWindow();">Close</button>
+			<button id="minimize" onclick="minimizeWindow();">Minimize</button>
+</div>
+	</body>
+    <!-- ScrimIRC 2014 - SamEureka -->
+</html>
